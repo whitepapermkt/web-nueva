@@ -709,3 +709,35 @@ b, strong { font-weight: 600; }
 /* ===== Encabezados de sección sin número ===== */
 .sechead { grid-template-columns: 1fr auto; }
 .sechead__intro { grid-column: 1 / -1; }
+
+/* ===== Overview y Spotlights ===== */
+.ovw { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: calc(2 * var(--gutter)); }
+.ovw__item { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; }
+.ovw__item, .spot { position: relative; }
+.ovw__item + .ovw__item::before, .spot + .spot::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(-1 * var(--gutter)); border-left: var(--rule-hair); }
+.ovw__img { display: block; aspect-ratio: 1400 / 645; overflow: hidden; border: var(--rule-thin); }
+.ovw__img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.ovw__img:hover img { transform: scale(1.02); }
+.ovw__item .kicker { margin-top: 1rem; }
+.ovw__item h3, .spot h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.875rem; line-height: 1.1; letter-spacing: -.01em; margin-top: .375rem; }
+.ovw__item h3 a, .spot h3 a { color: inherit; text-decoration: none; }
+.ovw__item h3 a:hover, .spot h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.ovw__item > .tag { margin-top: .625rem; justify-self: start; }
+
+.spots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: calc(2 * var(--gutter)); }
+.spot { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0; }
+.spot__img { display: block; position: relative; aspect-ratio: 16 / 9; background: var(--paper); border-bottom: var(--rule-hair); }
+.spot__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.spot .kicker { margin-top: 1rem; color: var(--red); }
+.spot h3 { font-size: 1.625rem; }
+.spot__desc { font-size: 1rem; line-height: 1.5; color: var(--ink-2); margin-top: .5rem; }
+.spot__meta { display: flex; justify-content: space-between; align-items: center; margin-top: .875rem; padding-top: .625rem; border-top: var(--rule-hair); align-self: end; }
+
+@media (max-width: 760px) {
+  .ovw, .spots { grid-template-columns: 1fr; row-gap: 2rem; }
+  .ovw__item, .spot { grid-row: auto; display: flex; flex-direction: column; }
+  .ovw__item + .ovw__item::before, .spot + .spot::before { display: none; }
+  .ovw__item + .ovw__item, .spot + .spot { border-top: var(--rule-hair); padding-top: 2rem; }
+  .ovw__item > .tag { align-self: flex-start; }
+  .spot__meta, .spot__img, .ovw__img { align-self: stretch; }
+}
