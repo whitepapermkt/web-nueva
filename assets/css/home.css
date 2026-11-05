@@ -624,3 +624,8 @@ b, strong { font-weight: 600; }
 .lead__fig--top { margin: 0 0 1.5rem; }
 .lead__fig--top img { width: 100%; height: auto; max-height: none; aspect-ratio: 1280 / 678; object-fit: contain; }
 .lead__fig--top figcaption { text-align: right; }
+
+/* Sin línea de folio: la nav cierra la cabecera */
+.masthead { padding-bottom: 1.5rem; }
+.mainnav { border-top: var(--rule-thin); }
+@media (max-width: 899px) { .masthead { border-bottom: var(--rule-thin); margin-bottom: .5rem; } }
