@@ -374,23 +374,13 @@
   <!-- ============ 12. SUSCRIPCIÓN ============ -->
   <section class="coupon" id="suscripcion" aria-labelledby="h-sus">
     <div class="wrap">
-      <div class="coupon__grid">
-        <div>
-          <span class="kicker" id="kickerSus">Suscripción</span>
-          <h2 id="h-sus">Menos ruido. <em>Más criterio.</em></h2>
-          <p class="coupon__deck">Un solo plan, todo incluido: la edición diaria en texto y audio, las investigaciones, Overview, los podcasts para suscriptores, el video, el directorio y la invitación a los eventos.</p>
-          <dl class="when">
-            <div><dt>Lun–Vie, temprano</dt><dd>Whitepaper Hoy en tu correo, y su versión en audio.</dd></div>
-            <div><dt>Cada semana</dt><dd>Principales y Spotlights: investigación propia.</dd></div>
-            <div><dt>Sábado</dt><dd>Overview, by Whitepaper.</dd></div>
-            <div><dt>Cada semana</dt><dd>Dark Side of the Road y Arquitectura de los Negocios.</dd></div>
-            <div><dt>Al publicarse</dt><dd>Entrevistas en video.</dd></div>
-            <div><dt>Durante el año</dt><dd>Invitación a eventos para suscriptores.</dd></div>
-            <div><dt>Siempre</dt><dd>El archivo completo desde 2020 y el Directorio de empresas.</dd></div>
-          </dl>
-          <p class="not">Qué no es: un noticiero de último minuto ni un boletín político. Es un resumen curado y análisis propio, en español, para quienes dirigen o invierten en México.</p>
-        </div>
-        <div>
+      <div class="coupon__head">
+        <span class="kicker" id="kickerSus">Suscripción</span>
+        <h2 id="h-sus">Elige tu plan</h2>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3 class="plan__name">Whitepaper</h3>
           <div class="toggle" role="radiogroup" aria-label="Plan de pago">
             <input type="radio" name="plan" id="plan-annual" value="annual" checked><label for="plan-annual">Anual <span class="save">−30%</span></label>
             <input type="radio" name="plan" id="plan-monthly" value="monthly"><label for="plan-monthly">Mensual</label>
@@ -400,12 +390,30 @@
           </div>
           <p class="price__eq" id="priceEq">Equivale a <span class="num">$132.50</span> al mes. Ahorras $678 frente al pago mensual.</p>
           <a class="btn btn--lg" id="subBtn" data-cta="pricing" href="https://www.whitepaper.mx/subscribe">Suscríbete por un año</a>
-          <p class="trust">Precios en pesos mexicanos. El pago se procesa en Substack. Cancela cuando quieras.</p>
-          <div class="coupon__more">
-            <a class="link" href="https://intercom.help/whitepaper/es/">¿Para tu equipo o tu consejo? Suscripción corporativa →</a>
-            <a class="link" href="https://www.whitepaper.mx/subscribe?gift=true">Regalar una suscripción →</a>
-            <a class="link" href="https://www.whitepaper.mx/account">¿Ya eres suscriptor? Inicia sesión →</a>
+        </div>
+        <div class="plan plan--legacy">
+          <h3 class="plan__name">Whitepaper <em>Legacy</em></h3>
+          <span class="plan__badge">Plan fundador</span>
+          <div class="price">
+            <strong>$6,295</strong><span>MXN al año</span>
           </div>
+          <div class="plan__perks">
+            <p>Todo lo de la suscripción anual, más:</p>
+            <ul>
+              <li>Boleto incluido a eventos</li>
+              <li>Retrato personalizado</li>
+              <li>Gorra de Whitepaper</li>
+            </ul>
+          </div>
+          <a class="btn btn--lg btn--ghost" data-cta="pricing-legacy" href="https://www.whitepaper.mx/subscribe">Suscríbete a Legacy</a>
+        </div>
+      </div>
+      <div class="coupon__foot">
+        <p class="trust">Precios en pesos mexicanos. El pago se procesa en Substack. Cancela cuando quieras.</p>
+        <div class="coupon__more">
+          <a class="link" href="https://intercom.help/whitepaper/es/">Suscripción corporativa →</a>
+          <a class="link" href="https://www.whitepaper.mx/subscribe?gift=true">Regalar una suscripción →</a>
+          <a class="link" href="https://www.whitepaper.mx/account">¿Ya eres suscriptor? Inicia sesión →</a>
         </div>
       </div>
     </div>

@@ -752,3 +752,34 @@ b, strong { font-weight: 600; }
 .spotrow { grid-template-columns: 10rem 1fr; }
 @media (max-width: 1099px) { .spotlist { justify-content: flex-start; } }
 @media (max-width: 600px) { .spotrow { grid-template-columns: 7rem 1fr; } }
+
+/* ===== Suscripción: dos planes ===== */
+.coupon__head { text-align: center; margin-bottom: 2.25rem; }
+.coupon__head h2 { margin-top: .5rem; }
+.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 60rem; margin: 0 auto; border: var(--rule-thin); background: var(--paper); }
+.plan { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0; padding: 2rem 2.25rem 2.25rem; align-items: start; }
+.plan + .plan { border-left: var(--rule-thin); }
+.plans { grid-template-rows: repeat(5, auto); }
+.plan__name { font-family: var(--font-display); font-weight: 400; font-size: 2.25rem; line-height: 1; letter-spacing: -.01em; }
+.plan__name em { font-style: italic; }
+.plan .toggle, .plan__badge { margin: 1.25rem 0 1.5rem; }
+.plan__badge { display: inline-flex; align-items: center; justify-self: start; min-height: 2.75rem; padding: 0 1.25rem; border: var(--rule-thin); font-family: var(--font-ui); font-size: var(--fs-ui); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--red); }
+.plan .price__eq, .plan__perks { margin-top: .75rem; }
+.plan__perks p { font-size: 1.0625rem; color: var(--ink-2); }
+.plan__perks ul { list-style: none; margin: .5rem 0 0; padding: 0; }
+.plan__perks li { font-size: 1rem; line-height: 1.5; padding: .35rem 0; border-top: var(--rule-hair); }
+.plan__perks li::before { content: "—"; color: var(--red); margin-right: .5rem; }
+.plan .btn--lg { margin-top: 1.75rem; width: 100%; max-width: none; align-self: end; }
+.coupon__foot { max-width: 60rem; margin: 1.25rem auto 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem 2rem; flex-wrap: wrap; }
+.coupon__foot .trust { margin: 0; }
+.coupon__foot .coupon__more { margin: 0; padding: 0; border: 0; flex-direction: row; flex-wrap: wrap; gap: 0 1.5rem; }
+@media (max-width: 760px) {
+  .plans { grid-template-columns: 1fr; grid-template-rows: none; }
+  .plan { display: flex; flex-direction: column; grid-row: auto; padding: 1.5rem 1.25rem; }
+  .plan .toggle, .plan__badge { align-self: flex-start; }
+  .plan + .plan { border-left: 0; border-top: var(--rule-thin); }
+  .coupon__foot { flex-direction: column; align-items: flex-start; }
+  .coupon__foot .coupon__more { flex-direction: column; }
+}
+.plan__badge { min-height: calc(2.75rem + 2px); box-sizing: border-box; }
+@media (max-width: 760px) { .plan__perks, .plan .price__eq { align-self: stretch; } }
