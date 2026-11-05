@@ -661,3 +661,8 @@ b, strong { font-weight: 600; }
 .still--photo:hover .still__play { background: var(--ink); color: var(--paper); }
 .still--photo img { transition: opacity .2s; }
 .still--photo:hover img { opacity: .92; }
+
+/* ===== Encabezados del hero: Whitepaper Hoy + Resumen diario ===== */
+.col-kicker__title { display: flex; flex-direction: column; gap: .2rem; }
+.col-kicker__sub { font-family: var(--font-ui); font-size: .6875rem; letter-spacing: .02em; color: var(--ink-3); text-transform: none; }
+.front .col-kicker { align-items: flex-end; min-height: 3rem; }
