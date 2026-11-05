@@ -796,3 +796,33 @@ b, strong { font-weight: 600; }
 @media (max-width: 760px) {
   .fslim__top { flex-direction: column; align-items: flex-start; }
 }
+
+/* ===== Destacados del mes (fondo claro, mismo formato que Whitepaper Audio) ===== */
+.picks { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-template-rows: repeat(6, auto); column-gap: calc(2 * var(--gutter)); }
+.pick { display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 0; position: relative; }
+.pick + .pick::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(-1 * var(--gutter)); border-left: var(--rule-hair); }
+.pick__art { display: block; position: relative; aspect-ratio: 1; border: var(--rule-thin); background: var(--white, #fff); overflow: hidden; }
+.pick__art img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.pick__art--contain img { object-fit: contain; padding: 8%; mix-blend-mode: multiply; }
+.pick__art--cover img { object-fit: cover; }
+.pick__art:hover img { opacity: .9; }
+.pick .kicker { margin-top: 1rem; align-self: end; }
+.pick__tag { margin-top: .35rem; font-family: var(--font-ui); font-size: var(--fs-meta); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--red); display: inline-flex; align-items: center; gap: .25rem; justify-self: start; }
+.pick h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.1; letter-spacing: -.005em; margin-top: .625rem; }
+.pick h3 a { color: inherit; text-decoration: none; }
+.pick h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.pick__desc { font-size: .9375rem; line-height: 1.5; color: var(--ink-2); margin-top: .5rem; }
+.pick__btn { margin-top: 1.125rem; width: 100%; align-self: end; }
+@media (max-width: 1099px) {
+  .picks { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: auto; row-gap: 2.5rem; }
+  .pick:nth-child(3n+1)::before { display: none; }
+}
+@media (max-width: 760px) {
+  .picks { display: grid; grid-template-columns: repeat(5, 78%); grid-template-rows: repeat(6, auto); row-gap: 0; overflow-x: auto; scroll-snap-type: x mandatory; column-gap: 0; margin-left: -1rem; margin-right: calc(-1 * var(--margin)); padding-right: var(--margin); }
+  .pick { padding: 0 1rem; scroll-snap-align: start; }
+  .pick::before { display: block !important; left: 0 !important; }
+  .pick:first-child::before { display: none !important; }
+}
+.pick { min-width: 0; }
+.pick__tag .lock { display: inline-block; width: 8px; height: 9px; flex: none; }
+.pick__art--contain img { padding: 5%; }
