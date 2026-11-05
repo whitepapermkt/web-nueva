@@ -619,3 +619,8 @@ b, strong { font-weight: 600; }
 }
 
 .comment.comment--sm > p::first-letter { all: unset; }
+
+/* Imagen del Principal: arriba del texto, completa, sin recorte */
+.lead__fig--top { margin: 0 0 1.5rem; }
+.lead__fig--top img { width: 100%; height: auto; max-height: none; aspect-ratio: 1280 / 678; object-fit: contain; }
+.lead__fig--top figcaption { text-align: right; }
