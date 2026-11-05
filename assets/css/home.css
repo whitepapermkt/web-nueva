@@ -701,7 +701,7 @@ b, strong { font-weight: 600; }
 .listen__platforms { flex-direction: column; gap: .75rem; align-items: flex-start; }
 .listen__platforms .kicker { color: #BDB8B0; }
 .listen__platbtns { display: flex; gap: .75rem; flex-wrap: wrap; }
-.platbtn { display: inline-flex; align-items: center; gap: .6rem; min-height: 3.5rem; padding: 0 1.75rem; background: var(--paper); color: var(--ink); border: 1px solid var(--paper); font-family: var(--font-display); font-size: 1.625rem; line-height: 1; letter-spacing: -.005em; text-decoration: none; transition: background .15s, color .15s; }
-.platbtn span { font-family: var(--font-ui); font-size: 1rem; }
+.platbtn { display: inline-flex; align-items: center; gap: .5rem; min-height: 2.75rem; padding: 0 1.25rem; background: var(--paper); color: var(--ink); border: 1px solid var(--paper); font-family: var(--font-ui); font-size: .9375rem; font-weight: 500; line-height: 1; letter-spacing: .01em; text-decoration: none; transition: background .15s, color .15s; }
+.platbtn span { font-size: .875rem; }
 .platbtn:hover, .platbtn:focus-visible { background: transparent; color: var(--paper); }
 @media (max-width: 760px) { .listen__platbtns { width: 100%; } .platbtn { flex: 1 1 100%; justify-content: center; } }
