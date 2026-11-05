@@ -705,3 +705,7 @@ b, strong { font-weight: 600; }
 .platbtn span { font-size: .875rem; }
 .platbtn:hover, .platbtn:focus-visible { background: transparent; color: var(--paper); }
 @media (max-width: 760px) { .listen__platbtns { width: 100%; } .platbtn { flex: 1 1 100%; justify-content: center; } }
+
+/* ===== Encabezados de sección sin número ===== */
+.sechead { grid-template-columns: 1fr auto; }
+.sechead__intro { grid-column: 1 / -1; }
