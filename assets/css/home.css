@@ -826,3 +826,4 @@ b, strong { font-weight: 600; }
 .pick { min-width: 0; }
 .pick__tag .lock { display: inline-block; width: 8px; height: 9px; flex: none; }
 .pick__art--contain img { padding: 5%; }
+.pick__desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
