@@ -827,3 +827,8 @@ b, strong { font-weight: 600; }
 .pick__tag .lock { display: inline-block; width: 8px; height: 9px; flex: none; }
 .pick__art--contain img { padding: 5%; }
 .pick__desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+/* Destacados: columnas según el número de tarjetas (3 a 5) */
+.picks { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+.pick__art { aspect-ratio: 4 / 3; }
+@media (max-width: 1099px) { .picks { grid-template-rows: repeat(6, auto); row-gap: 0; } .pick:nth-child(3n+1)::before { display: block; } .pick:first-child::before { display: none; } }
+@media (max-width: 760px) { .picks { grid-auto-columns: 78%; } }
