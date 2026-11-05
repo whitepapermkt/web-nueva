@@ -783,3 +783,16 @@ b, strong { font-weight: 600; }
 }
 .plan__badge { min-height: calc(2.75rem + 2px); box-sizing: border-box; }
 @media (max-width: 760px) { .plan__perks, .plan .price__eq { align-self: stretch; } }
+
+/* ===== Footer simplificado ===== */
+.footer--slim { padding: 2rem 0 1.5rem; }
+.fslim__top { display: flex; align-items: center; gap: 1.5rem 2.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; border-bottom: var(--rule-hair); }
+.fslim__logo { height: 1.125rem; width: auto; }
+.fslim__nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; flex: 1; font-family: var(--font-ui); font-size: var(--fs-ui); }
+.fslim__nav a { color: var(--ink-2); text-decoration: none; min-height: 2rem; display: inline-flex; align-items: center; }
+.fslim__nav a:hover { color: var(--ink); text-decoration: underline; }
+.fslim__legal { margin-top: 1rem; font-family: var(--font-ui); font-size: var(--fs-meta); color: var(--ink-3); }
+.fslim__legal a { color: inherit; }
+@media (max-width: 760px) {
+  .fslim__top { flex-direction: column; align-items: flex-start; }
+}
