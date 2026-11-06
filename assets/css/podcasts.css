@@ -164,3 +164,34 @@
   .pmember h2 { font-size: 2.125rem; }
   .voices { grid-template-columns: 1fr; }
 }
+
+/* ---------- Filtro por programa (portadas) ---------- */
+.pfilter { display: block; padding: 1.25rem 0 0; }
+.ptiles { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 1rem; }
+.ptile { display: flex; flex-direction: column; align-items: stretch; gap: .5rem; padding: 0; border: 0; background: transparent; cursor: pointer; text-align: left; color: var(--ink); font: inherit; }
+.ptile__art { display: block; aspect-ratio: 1; position: relative; overflow: hidden; border: var(--rule-thin); transition: opacity .15s; }
+.ptile__art::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 3px transparent; pointer-events: none; transition: box-shadow .15s; }
+.ptile__art > img, .ptile__art > .cover { width: 100%; height: 100%; border: 0; box-sizing: border-box; }
+.ptile__art > img { object-fit: cover; display: block; }
+.ptile__art > .cover { aspect-ratio: auto; }
+.ptile__art .cover { padding: 9%; }
+.ptile__art .cover__name { font-size: 1.05rem; }
+.ptile__art .cover__w { font-size: .4rem; }
+.ptile__art .cover__sub { display: none; }
+.ptile__art--all { display: grid; place-items: center; background: var(--ink); color: var(--paper); }
+.ptile__art--all b { font-family: var(--font-display); font-weight: 400; font-size: 3rem; line-height: 1; }
+.ptile__name { font-family: var(--font-ui); font-size: var(--fs-ui); font-weight: 500; line-height: 1.25; }
+.ptiles.has-pick .ptile:not(.is-on) .ptile__art { opacity: .45; }
+.ptile:hover .ptile__art { opacity: 1 !important; }
+.ptile.is-on .ptile__art::after { box-shadow: inset 0 0 0 4px var(--red); }
+.ptile.is-on .ptile__name { font-weight: 700; }
+.ptile:focus-visible { outline: none; }
+.ptile:focus-visible .ptile__art::after { box-shadow: inset 0 0 0 4px var(--ink); }
+.pfilter__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 2rem; margin-top: 1.25rem; padding: .75rem 0; border-top: var(--rule-hair); border-bottom: var(--rule-thin); }
+.pcatalog .pshow:first-child { padding-top: 1.5rem; }
+@media (max-width: 1099px) { .ptiles { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 760px) {
+  .ptiles { display: flex; overflow-x: auto; gap: .75rem; scroll-snap-type: x mandatory; margin-right: calc(-1 * var(--margin)); padding-right: var(--margin); padding-bottom: .25rem; }
+  .ptile { flex: 0 0 6.5rem; scroll-snap-align: start; }
+  .ptile__art .cover__name { font-size: .85rem; }
+}

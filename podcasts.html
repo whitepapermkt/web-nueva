@@ -75,7 +75,7 @@
     <section class="phead" aria-labelledby="h-pod">
       <p class="kicker">Whitepaper Audio</p>
       <h1 id="h-pod">Podcasts</h1>
-      <p class="phead__deck">Los negocios de México, para escuchar. Diario, semanal, en series y en entrevista.</p>
+      <p class="phead__deck">Los negocios de México, para escuchar.</p>
       <ul class="phead__stats" aria-label="Resumen del catálogo">
         <li><strong>7</strong> programas</li>
         <li><strong>2</strong> abiertos</li>
@@ -86,10 +86,10 @@
     </section>
   </div>
 
-  <!-- ============ AL AIRE (destacados, como Bulwark) ============ -->
+  <!-- ============ ESTA SEMANA (destacados, como Bulwark) ============ -->
   <section class="onair on-ink" aria-labelledby="h-onair">
     <div class="wrap">
-      <div class="onair__head"><h2 id="h-onair">Al aire esta semana</h2><span class="onair__date">Semana del 2 al 6 de noviembre</span></div>
+      <div class="onair__head"><h2 id="h-onair">Esta semana</h2><span class="onair__date">Semana del 2 al 6 de noviembre</span></div>
       <div class="onair__grid">
         <article class="onair__item" data-ep="w10-205">
           <div class="onair__art"><img src="assets/img/show-w10.jpg" alt="Portada de Whitepaper 10" width="600" height="600"></div>
@@ -127,75 +127,37 @@
     </div>
   </section>
 
-  <!-- ============ GUÍA DE LA SEMANA ============ -->
-  <div class="wrap section">
-    <section class="guide" aria-labelledby="h-guide">
-      <div class="sechead"><h2 class="sechead__title" id="h-guide">Guía de la semana</h2><p class="sechead__intro">Qué sale cada día. Las series y entrevistas se publican por temporada.</p></div>
-      <div class="guide__grid" role="table" aria-label="Programación semanal">
-        <div class="guide__row guide__row--head" role="row"><span role="columnheader">Programa</span><span role="columnheader">Lun</span><span role="columnheader">Mar</span><span role="columnheader">Mié</span><span role="columnheader">Jue</span><span role="columnheader">Vie</span></div>
-        <div class="guide__row" role="row"><a role="rowheader" href="#whitepaper-hoy">Whitepaper Hoy en audio</a><span role="cell" class="on">6 min</span><span role="cell" class="on">6 min</span><span role="cell" class="on">6 min</span><span role="cell" class="on">6 min</span><span role="cell" class="on">6 min</span></div>
-        <div class="guide__row" role="row"><a role="rowheader" href="#whitepaper-10">Whitepaper 10</a><span role="cell" class="on">Deep dive</span><span role="cell"></span><span role="cell" class="on">La semana</span><span role="cell"></span><span role="cell"></span></div>
-        <div class="guide__row" role="row"><a role="rowheader" href="#mexmoves">MexMoves</a><span role="cell"></span><span role="cell"></span><span role="cell"></span><span role="cell" class="on" lang="en">Weekly</span><span role="cell"></span></div>
-      </div>
-    </section>
-  </div>
-
   <!-- ============ CATÁLOGO CLASIFICADO ============ -->
   <div class="wrap section" id="programas">
     <section aria-labelledby="h-shows">
-      <div class="sechead"><h2 class="sechead__title" id="h-shows">Todos los programas</h2><p class="sechead__intro">Clasificados por formato. Filtra por acceso o idioma.</p></div>
+      <div class="sechead"><h2 class="sechead__title" id="h-shows">Todos los programas</h2><p class="sechead__intro">Elige un programa para ver su ficha y sus episodios.</p></div>
 
-      <div class="pfilter" role="group" aria-label="Filtrar programas">
-        <div class="pfilter__set"><span class="pfilter__label">Formato</span>
-          <button type="button" class="chip is-on" data-filter="fmt" data-value="all" aria-pressed="true">Todos</button>
-          <button type="button" class="chip" data-filter="fmt" data-value="diario" aria-pressed="false">Diario</button>
-          <button type="button" class="chip" data-filter="fmt" data-value="semanal" aria-pressed="false">Semanal</button>
-          <button type="button" class="chip" data-filter="fmt" data-value="series" aria-pressed="false">Series</button>
-          <button type="button" class="chip" data-filter="fmt" data-value="entrevistas" aria-pressed="false">Entrevistas</button>
+      <div class="pfilter" role="group" aria-label="Filtrar por programa">
+        <div class="ptiles">
+          <button type="button" class="ptile is-on" data-filter="show" data-value="all" aria-pressed="true"><span class="ptile__art ptile__art--all" aria-hidden="true"><b>7</b></span><span class="ptile__name">Todos</span></button>
+          <button type="button" class="ptile" data-filter="show" data-value="whitepaper-10" aria-pressed="false"><span class="ptile__art" aria-hidden="true"><img src="assets/img/show-w10.jpg" alt="Portada de Whitepaper 10" width="600" height="600"></span><span class="ptile__name">Whitepaper 10</span></button>
+          <button type="button" class="ptile" data-filter="show" data-value="whitepaper-hoy" aria-pressed="false"><span class="ptile__art" aria-hidden="true"><div class="cover cover--red-rule" role="img" aria-label="Portada de Whitepaper Hoy en audio"><span class="cover__w">Whitepaper</span><span class="cover__name">Hoy, <em>en audio</em></span></div></span><span class="ptile__name">Whitepaper Hoy en audio</span></button>
+          <button type="button" class="ptile" data-filter="show" data-value="mexmoves" aria-pressed="false"><span class="ptile__art" aria-hidden="true"><img src="assets/img/show-mexmoves.jpg" alt="Portada de MexMoves" width="600" height="600"></span><span class="ptile__name">MexMoves</span></button>
+          <button type="button" class="ptile" data-filter="show" data-value="dark-side" aria-pressed="false"><span class="ptile__art" aria-hidden="true"><div class="cover cover--ink" role="img" aria-label="Portada de Dark Side of the Road"><span class="cover__w">Whitepaper</span><span class="cover__name">Dark Side <em>of the Road</em></span></div></span><span class="ptile__name">Dark Side of the Road</span></button>
+          <button type="button" class="ptile" data-filter="show" data-value="arquitectura" aria-pressed="false"><span class="ptile__art" aria-hidden="true"><div class="cover cover--hatch" role="img" aria-label="Portada de Arquitectura de los Negocios"><span class="cover__plate"><span class="cover__w">Whitepaper</span></span><span class="cover__plate cover__name">Arquitectura <em>de los Negocios</em></span></div></span><span class="ptile__name">Arquitectura de los Negocios</span></button>
+          <button type="button" class="ptile" data-filter="show" data-value="la-entrevista" aria-pressed="false"><span class="ptile__art" aria-hidden="true"><div class="cover cover--photo" role="img" aria-label="Portada de La Entrevista"><img src="assets/img/video-chico-pardo.webp" alt="" width="1216" height="684"><span class="cover__plate"><span class="cover__w">Whitepaper</span><span class="cover__name">La <em>Entrevista</em></span></span></div></span><span class="ptile__name">La Entrevista</span></button>
+          <button type="button" class="ptile" data-filter="show" data-value="desde-dc" aria-pressed="false"><span class="ptile__art" aria-hidden="true"><div class="cover cover--dc" role="img" aria-label="Portada de Desde DC"><span class="cover__w">Whitepaper</span><span class="cover__name">Desde <em>DC</em></span><span class="cover__sub">Washington · 2026</span></div></span><span class="ptile__name">Desde DC</span></button>
         </div>
-        <div class="pfilter__set"><span class="pfilter__label">Acceso</span>
-          <button type="button" class="chip is-on" data-filter="access" data-value="all" aria-pressed="true">Todos</button>
-          <button type="button" class="chip" data-filter="access" data-value="open" aria-pressed="false">Abiertos</button>
-          <button type="button" class="chip" data-filter="access" data-value="sub" aria-pressed="false"><svg class="lock"><use href="#lock"/></svg> Suscriptores</button>
+        <div class="pfilter__row">
+          <div class="pfilter__set"><span class="pfilter__label">Acceso</span>
+            <button type="button" class="chip is-on" data-filter="access" data-value="all" aria-pressed="true">Todos</button>
+            <button type="button" class="chip" data-filter="access" data-value="open" aria-pressed="false">Abiertos</button>
+            <button type="button" class="chip" data-filter="access" data-value="sub" aria-pressed="false"><svg class="lock"><use href="#lock"/></svg> Suscriptores</button>
+          </div>
+          <p class="pfilter__count" aria-live="polite"><span id="pCount">7</span> programas</p>
         </div>
-        <div class="pfilter__set"><span class="pfilter__label">Idioma</span>
-          <button type="button" class="chip is-on" data-filter="lang" data-value="all" aria-pressed="true">Todos</button>
-          <button type="button" class="chip" data-filter="lang" data-value="es" aria-pressed="false">Español</button>
-          <button type="button" class="chip" data-filter="lang" data-value="en" aria-pressed="false">Inglés</button>
-        </div>
-        <p class="pfilter__count" aria-live="polite"><span id="pCount">7</span> programas</p>
       </div>
 
       <div class="pcatalog">
-        <section class="pgroup" data-group="diario" aria-labelledby="g-diario">
-          <header class="pgroup__head"><h2 id="g-diario">Diario</h2><p><em>Para empezar el día.</em> La edición de la mañana, en audio.</p><span class="pgroup__count">1 programa</span></header>
-          <article class="pshow" id="whitepaper-hoy" data-fmt="diario" data-access="sub" data-lang="es">
-            <div class="pshow__art"><div class="cover cover--red-rule" role="img" aria-label="Portada de Whitepaper Hoy en audio"><span class="cover__w">Whitepaper</span><span class="cover__name">Hoy, <em>en audio</em></span></div></div>
-            <div class="pshow__main">
-              <div class="pshow__tags"><span class="kicker">Diario</span><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
-              <h3 class="pshow__name">Whitepaper Hoy en audio</h3>
-              <p class="pshow__hosts">Con Susana Sáenz</p>
-              <p class="pshow__desc">La edición diaria, leída en estudio. Para el trayecto a la oficina o entre juntas. Alterna entre texto y audio cuando quieras.</p>
-              <dl class="pshow__facts"><div><dt>Frecuencia</dt><dd>Lunes a viernes</dd></div><div><dt>Duración</dt><dd>6 a 8 min</dd></div><div><dt>Idioma</dt><dd>Español</dd></div><div><dt>Acceso</dt><dd>Suscriptores</dd></div></dl>
-              <div class="pshow__cta"><a class="btn" href="https://www.whitepaper.mx/p/whitepaper-hoy-05-de-noviembre-de-28a"><span class="tri" aria-hidden="true">▶</span> Escuchar el más reciente</a><span class="pshow__links"><a class="link" href="https://www.whitepaper.mx/s/whitepaper-audio">Todas las ediciones →</a></span></div>
-            </div>
-            <div class="pshow__eps">
-              <h4 class="pshow__epshead">Episodios recientes</h4>
-              <ol class="eplist">
-              <li class="ep">
-                <a class="ep__play ep__play--link" href="https://www.whitepaper.mx/p/whitepaper-hoy-05-de-noviembre-de-28a" aria-label="Escuchar en whitepaper.mx: Whitepaper Hoy, 5 de noviembre de 2026"><span class="tri" aria-hidden="true">▶</span></a>
-                <div class="ep__body"><p class="ep__title"><a href="https://www.whitepaper.mx/p/whitepaper-hoy-05-de-noviembre-de-28a">Whitepaper Hoy, 5 de noviembre de 2026</a></p><p class="ep__meta"><span>05.11.26</span><span>6 min</span><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></p></div>
-              </li>
-              </ol>
-            </div>
-          </article>
-        </section>
-        <section class="pgroup" data-group="semanal" aria-labelledby="g-semanal">
-          <header class="pgroup__head"><h2 id="g-semanal">Semanal</h2><p><em>Conversación y análisis.</em> Los episodios que marcan la semana de negocios.</p><span class="pgroup__count">2 programas</span></header>
-          <article class="pshow" id="whitepaper-10" data-fmt="semanal" data-access="open" data-lang="es" data-ep="w10-205">
+          <article class="pshow" id="whitepaper-10" data-show="whitepaper-10" data-fmt="semanal" data-access="open" data-lang="es" data-ep="w10-205">
             <div class="pshow__art"><img src="assets/img/show-w10.jpg" alt="Portada de Whitepaper 10" width="600" height="600" loading="lazy"></div>
             <div class="pshow__main">
-              <div class="pshow__tags"><span class="kicker">Semanal</span><span class="tag tag--open">Abierto</span></div>
+              <div class="pshow__tags"><span class="tag tag--open">Abierto</span></div>
               <h3 class="pshow__name">Whitepaper 10</h3>
               <p class="pshow__hosts">Karla Berman y René Lankenau</p>
               <p class="pshow__desc">El podcast con el que muchos llegaron a Whitepaper. Los lunes, un deep dive sobre un solo tema; los miércoles, las noticias de la semana con análisis.</p>
@@ -220,10 +182,30 @@
               </ol>
             </div>
           </article>
-          <article class="pshow" id="mexmoves" data-fmt="semanal" data-access="open" data-lang="en" data-ep="mex-92">
+          <article class="pshow" id="whitepaper-hoy" data-show="whitepaper-hoy" data-fmt="diario" data-access="sub" data-lang="es">
+            <div class="pshow__art"><div class="cover cover--red-rule" role="img" aria-label="Portada de Whitepaper Hoy en audio"><span class="cover__w">Whitepaper</span><span class="cover__name">Hoy, <em>en audio</em></span></div></div>
+            <div class="pshow__main">
+              <div class="pshow__tags"><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
+              <h3 class="pshow__name">Whitepaper Hoy en audio</h3>
+              <p class="pshow__hosts">Con Susana Sáenz</p>
+              <p class="pshow__desc">La edición diaria, leída en estudio. Para el trayecto a la oficina o entre juntas. Alterna entre texto y audio cuando quieras.</p>
+              <dl class="pshow__facts"><div><dt>Frecuencia</dt><dd>Lunes a viernes</dd></div><div><dt>Duración</dt><dd>6 a 8 min</dd></div><div><dt>Idioma</dt><dd>Español</dd></div><div><dt>Acceso</dt><dd>Suscriptores</dd></div></dl>
+              <div class="pshow__cta"><a class="btn" href="https://www.whitepaper.mx/p/whitepaper-hoy-05-de-noviembre-de-28a"><span class="tri" aria-hidden="true">▶</span> Escuchar el más reciente</a><span class="pshow__links"><a class="link" href="https://www.whitepaper.mx/s/whitepaper-audio">Todas las ediciones →</a></span></div>
+            </div>
+            <div class="pshow__eps">
+              <h4 class="pshow__epshead">Episodios recientes</h4>
+              <ol class="eplist">
+              <li class="ep">
+                <a class="ep__play ep__play--link" href="https://www.whitepaper.mx/p/whitepaper-hoy-05-de-noviembre-de-28a" aria-label="Escuchar en whitepaper.mx: Whitepaper Hoy, 5 de noviembre de 2026"><span class="tri" aria-hidden="true">▶</span></a>
+                <div class="ep__body"><p class="ep__title"><a href="https://www.whitepaper.mx/p/whitepaper-hoy-05-de-noviembre-de-28a">Whitepaper Hoy, 5 de noviembre de 2026</a></p><p class="ep__meta"><span>05.11.26</span><span>6 min</span><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></p></div>
+              </li>
+              </ol>
+            </div>
+          </article>
+          <article class="pshow" id="mexmoves" data-show="mexmoves" data-fmt="semanal" data-access="open" data-lang="en" data-ep="mex-92">
             <div class="pshow__art"><img src="assets/img/show-mexmoves.jpg" alt="Portada de MexMoves" width="600" height="600" loading="lazy"></div>
             <div class="pshow__main">
-              <div class="pshow__tags"><span class="kicker">Semanal</span><span class="tag tag--open" lang="es">En inglés</span></div>
+              <div class="pshow__tags"><span class="tag tag--open" lang="es">En inglés</span></div>
               <h3 class="pshow__name">MexMoves</h3>
               <p class="pshow__hosts" lang="en">With Damian Fraser and Eduardo García</p>
               <p class="pshow__desc">Las historias de negocios de México con impacto global, cada semana y con un invitado por episodio. Para quien opera entre México y Estados Unidos.</p>
@@ -248,13 +230,10 @@
               </ol>
             </div>
           </article>
-        </section>
-        <section class="pgroup" data-group="series" aria-labelledby="g-series">
-          <header class="pgroup__head"><h2 id="g-series">Series</h2><p><em>Un tema, varios episodios.</em> Industrias y empresas contadas a fondo.</p><span class="pgroup__count">2 programas</span></header>
-          <article class="pshow" id="dark-side" data-fmt="series" data-access="sub" data-lang="es">
+          <article class="pshow" id="dark-side" data-show="dark-side" data-fmt="series" data-access="sub" data-lang="es">
             <div class="pshow__art"><div class="cover cover--ink" role="img" aria-label="Portada de Dark Side of the Road"><span class="cover__w">Whitepaper</span><span class="cover__name">Dark Side <em>of the Road</em></span></div></div>
             <div class="pshow__main">
-              <div class="pshow__tags"><span class="kicker">Series</span><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
+              <div class="pshow__tags"><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
               <h3 class="pshow__name">Dark Side of the Road</h3>
               <p class="pshow__hosts">Con Alberto Bortoni</p>
               <p class="pshow__desc">Una serie sobre la industria automotriz: marcas, modelos de negocio y lo que cambia para México. Episodios para ir a fondo en un solo tema.</p>
@@ -279,10 +258,10 @@
               </ol>
             </div>
           </article>
-          <article class="pshow" id="arquitectura" data-fmt="series" data-access="sub" data-lang="es">
+          <article class="pshow" id="arquitectura" data-show="arquitectura" data-fmt="series" data-access="sub" data-lang="es">
             <div class="pshow__art"><div class="cover cover--hatch" role="img" aria-label="Portada de Arquitectura de los Negocios"><span class="cover__plate"><span class="cover__w">Whitepaper</span></span><span class="cover__plate cover__name">Arquitectura <em>de los Negocios</em></span></div></div>
             <div class="pshow__main">
-              <div class="pshow__tags"><span class="kicker">Series</span><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
+              <div class="pshow__tags"><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
               <h3 class="pshow__name">Arquitectura de los Negocios</h3>
               <p class="pshow__hosts">Con Susana Sáenz</p>
               <p class="pshow__desc">Cómo funcionan, por dentro, los modelos de negocio. Historias de empresa contadas en varios episodios, con entrevistas a expertos.</p>
@@ -299,13 +278,10 @@
               </ol>
             </div>
           </article>
-        </section>
-        <section class="pgroup" data-group="entrevistas" aria-labelledby="g-entrevistas">
-          <header class="pgroup__head"><h2 id="g-entrevistas">Entrevistas</h2><p><em>Quienes toman las decisiones.</em> Conversaciones con empresarios, directivos e inversionistas.</p><span class="pgroup__count">2 programas</span></header>
-          <article class="pshow" id="la-entrevista" data-fmt="entrevistas" data-access="sub" data-lang="es">
+          <article class="pshow" id="la-entrevista" data-show="la-entrevista" data-fmt="entrevistas" data-access="sub" data-lang="es">
             <div class="pshow__art"><div class="cover cover--photo" role="img" aria-label="Portada de La Entrevista"><img src="assets/img/video-chico-pardo.webp" alt="" width="1216" height="684" loading="lazy"><span class="cover__plate"><span class="cover__w">Whitepaper</span><span class="cover__name">La <em>Entrevista</em></span></span></div></div>
             <div class="pshow__main">
-              <div class="pshow__tags"><span class="kicker">Entrevistas</span><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
+              <div class="pshow__tags"><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
               <h3 class="pshow__name">La Entrevista</h3>
               <p class="pshow__hosts">Con René Lankenau y Susana Sáenz</p>
               <p class="pshow__desc">Conversaciones largas con quienes dirigen, fundan o financian empresas en México. Algunas, también en video.</p>
@@ -330,10 +306,10 @@
               </ol>
             </div>
           </article>
-          <article class="pshow" id="desde-dc" data-fmt="entrevistas" data-access="sub" data-lang="es">
+          <article class="pshow" id="desde-dc" data-show="desde-dc" data-fmt="entrevistas" data-access="sub" data-lang="es">
             <div class="pshow__art"><div class="cover cover--dc" role="img" aria-label="Portada de Desde DC"><span class="cover__w">Whitepaper</span><span class="cover__name">Desde <em>DC</em></span><span class="cover__sub">Washington · 2026</span></div></div>
             <div class="pshow__main">
-              <div class="pshow__tags"><span class="kicker">Entrevistas</span><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
+              <div class="pshow__tags"><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
               <h3 class="pshow__name">Desde DC</h3>
               <p class="pshow__hosts">Con Susana Sáenz</p>
               <p class="pshow__desc">Desde el North Capital Meridian Diplomacy Forum en Washington: conversaciones sobre la relación económica entre México y Estados Unidos.</p>
@@ -358,7 +334,6 @@
               </ol>
             </div>
           </article>
-        </section>
         <p class="pempty" hidden>No hay programas con esa combinación. <button type="button" class="link" id="pReset">Ver todos →</button></p>
       </div>
     </section>
