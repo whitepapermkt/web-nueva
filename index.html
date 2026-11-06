@@ -204,11 +204,12 @@
        Para cambiar un destacado, edita su bloque <article class="pick">:
        imagen, kicker (tipo), etiqueta (precio o acceso), título, texto, botón y enlace.
        pick__art--contain para ilustraciones; pick__art--cover para fotos de producto.
-       Funciona con 3, 4 o 5 destacados. -->
+       Es un carrusel: agrega o quita bloques y se acomoda solo. -->
   <div class="wrap section" id="destacados">
     <section aria-labelledby="h-picks">
       <div class="sechead">
         <h2 class="sechead__title" id="h-picks">Descubre más</h2>
+        <div class="picks__nav" aria-label="Desplazar Descubre más"><button type="button" class="picks__arrow" data-picks="-1" aria-label="Anterior">←</button><button type="button" class="picks__arrow" data-picks="1" aria-label="Siguiente">→</button></div>
       </div>
       <div class="picks">
         <article class="pick">

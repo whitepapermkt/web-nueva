@@ -99,6 +99,23 @@
   syncDetails();
   (mq.addEventListener ? mq.addEventListener("change", syncDetails) : mq.addListener(syncDetails));
 
+
+  /* ---------- Descubre más: carrusel ---------- */
+  var picks = $(".picks");
+  if (picks) {
+    var arrows = $$("[data-picks]");
+    var step = function () { var c = picks.querySelector(".pick"); return c ? c.getBoundingClientRect().width + parseFloat(getComputedStyle(picks).columnGap || 0) : picks.clientWidth; };
+    var sync = function () {
+      var max = picks.scrollWidth - picks.clientWidth - 2;
+      arrows.forEach(function (a) { a.disabled = a.getAttribute("data-picks") === "-1" ? picks.scrollLeft <= 2 : picks.scrollLeft >= max; });
+      var nav = $(".picks__nav"); if (nav) nav.hidden = picks.scrollWidth <= picks.clientWidth + 2;
+    };
+    arrows.forEach(function (a) { a.addEventListener("click", function () { picks.scrollBy({ left: step() * Number(a.getAttribute("data-picks")), behavior: "smooth" }); }); });
+    picks.addEventListener("scroll", function () { window.requestAnimationFrame(sync); }, { passive: true });
+    window.addEventListener("resize", sync);
+    sync();
+  }
+
   /* ---------- Selector de plan ---------- */
   var PLANS = {
     annual: { num: "$1,590", unit: "MXN al año", eq: 'Equivale a <span class="num">$132.50</span> al mes. Ahorras $678 frente al pago mensual.', btn: "Suscríbete por un año" },
