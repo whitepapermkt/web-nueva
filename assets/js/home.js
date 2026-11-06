@@ -121,6 +121,7 @@
   var audio = $("#wpAudio"), player = $("#player");
   var pToggle = $("#pToggle"), pSeek = $("#pSeek"), pTime = $("#pTime"), pRate = $("#pRate"), pLive = $("#pLive"), pBar = $("#pBarMobile");
   var current = null, seeking = false;
+  window.WP_SYNC = function () { setButtons(); };
 
   function fmt(s) {
     if (!isFinite(s)) return "0:00";
@@ -148,7 +149,7 @@
     document.documentElement.style.setProperty("--player-h", player.offsetHeight + "px");
   }
   function load(id) {
-    var ep = EPISODES[id]; if (!ep) return;
+    var ep = EPISODES[id] || (window.WP_EP && window.WP_EP[id]); if (!ep) return;
     current = id;
     audio.src = ep.src;
     $("#pTitle").textContent = ep.title; $("#pShow").textContent = ep.show; $("#pArt").src = ep.art;
@@ -165,11 +166,12 @@
     if (p && p.catch) p.catch(function () { announce("No pudimos cargar el audio. Escúchalo en Spotify o Apple Podcasts."); });
     track("audio_play", { episode: current });
   }
-  $$("[data-play]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var id = b.getAttribute("data-play");
-      if (id === current && !audio.paused) audio.pause(); else play(id);
-    });
+  /* Delegado: también funciona con episodios que se agregan después (página de Podcasts) */
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-play]");
+    if (!b) return;
+    var id = b.getAttribute("data-play");
+    if (id === current && !audio.paused) audio.pause(); else play(id);
   });
   pToggle.addEventListener("click", function () { audio.paused ? play() : audio.pause(); });
   $("#pBack").addEventListener("click", function () { audio.currentTime = Math.max(0, audio.currentTime - 15); });
@@ -188,7 +190,7 @@
   pSeek.addEventListener("input", function () { seeking = true; });
   pSeek.addEventListener("change", function () { if (audio.duration) audio.currentTime = pSeek.value / 100 * audio.duration; seeking = false; });
 
-  audio.addEventListener("play", function () { setButtons(); announce("Reproduciendo " + (EPISODES[current] || {}).show); });
+  audio.addEventListener("play", function () { setButtons(); announce("Reproduciendo " + ((EPISODES[current] || (window.WP_EP || {})[current]) || {}).show); });
   audio.addEventListener("pause", function () { setButtons(); announce("Pausado"); });
   audio.addEventListener("timeupdate", function () {
     var d = audio.duration || 0, t = audio.currentTime, pct = d ? t / d * 100 : 0;
