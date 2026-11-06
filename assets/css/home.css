@@ -857,3 +857,18 @@ b, strong { font-weight: 600; }
 }
 .pick > .pick__art { aspect-ratio: 4 / 3; } .pick { grid-template-columns: 9.5rem minmax(0, 1fr); } @media (max-width: 760px) { .pick { grid-template-columns: 7rem minmax(0, 1fr); } }
 .pick__btn { min-height: 2rem; margin-top: .25rem; display: inline-flex; align-items: center; }
+/* Descubre más: 4 tarjetas en 2 columnas */
+.picks { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: auto; }
+.pick:nth-child(odd)::before { display: none; }
+.pick:nth-child(n+3) { margin-top: 1.5rem; padding-top: 1.5rem; border-top: var(--rule-hair); }
+.pick:nth-child(n+3)::before { top: 1.5rem; }
+@media (max-width: 1099px) { .pick:nth-child(n+3) { margin-top: 0; } }
+@media (max-width: 760px) {
+  .picks { grid-template-columns: 1fr; }
+  .pick:nth-child(n+2) { margin-top: 0; padding-top: 1.25rem; border-top: var(--rule-hair); }
+}
+@media (min-width: 761px) and (max-width: 1099px) {
+  .pick:nth-child(2) { padding-top: 0; border-top: 0; }
+  .pick:nth-child(n+3) { padding-top: 1.25rem; border-top: var(--rule-hair); }
+  .pick:nth-child(even)::before { display: block !important; }
+}
