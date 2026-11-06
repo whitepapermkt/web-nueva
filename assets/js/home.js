@@ -15,6 +15,30 @@
       show: "MexMoves",
       art: "assets/img/show-mexmoves.jpg",
       src: "https://anchor.fm/s/10978373c/podcast/play/128369055/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-29%2F435353187-44100-2-84c69a37d400b.mp3"
+    },
+    "w10-204": {
+      title: "204. Costco: el modelo de negocio detrás de una marca de culto",
+      show: "Whitepaper 10",
+      art: "assets/img/show-w10.jpg",
+      src: "https://anchor.fm/s/10940ffb0/podcast/play/128632231/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-2%2F435699270-44100-2-f9d3f32de9ec.mp3"
+    },
+    "w10-203": {
+      title: "203. Startups: ¿por qué tantos fundadores no ganan dinero al vender su empresa?",
+      show: "Whitepaper 10",
+      art: "assets/img/show-w10.jpg",
+      src: "https://anchor.fm/s/10940ffb0/podcast/play/128310277/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-28%2F435278512-44100-2-244f1ff089f3b.mp3"
+    },
+    "mex-91": {
+      title: "91. Smart Fit Works Out in Mexico; Economic Recovery, América Móvil, Taxes, Digital Payments and Traffic Jams",
+      show: "MexMoves",
+      art: "assets/img/show-mexmoves.jpg",
+      src: "https://anchor.fm/s/10978373c/podcast/play/127909671/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-22%2F434761448-44100-2-914424c5385eb.mp3"
+    },
+    "mex-90": {
+      title: "90. Spiegel on Buying Querétaro FC; Endeavor on Startups; Televisa–AT&T, Mexico’s AI Risks",
+      show: "MexMoves",
+      art: "assets/img/show-mexmoves.jpg",
+      src: "https://anchor.fm/s/10978373c/podcast/play/127535293/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-15%2F434252966-44100-2-e11c83b244672.mp3"
     }
   };
 
