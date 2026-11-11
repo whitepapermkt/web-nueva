@@ -77,22 +77,32 @@
       <section class="front__daily daily" aria-labelledby="h-daily">
         <div class="col-kicker"><span class="col-kicker__title"><span class="kicker" id="h-daily">Whitepaper Hoy</span><span class="col-kicker__sub">Resumen diario</span></span><span class="tag"><svg class="lock"><use href="#lock"/></svg>Suscriptores</span></div>
 
-        <!-- Solo fecha + subtítulo de cada edición (campo "subtitle" del post en Substack). -->
+        <!-- Cada edición sale del subtítulo del post en Substack, partido por ";".
+             Hoy: primeros 5 temas + "y N temas más". Anteriores: primeros 3 + "+N". -->
         <article class="daily__today">
-          <p class="daily__date"><span class="dot" aria-hidden="true"></span><span class="kicker">Hoy · Miércoles 11 de noviembre</span></p>
-          <h2><a href="https://www.whitepaper.mx/p/whitepaper-hoy-9d4">Vidanta; IOS Offices; Grupo Simec; AMETEK; Clara; Fossil; On Holding; Anthropic; New Balance; spotlight en: KUIU</a></h2>
+          <p class="daily__date"><span class="dot" aria-hidden="true"></span><span class="kicker">Hoy</span></p>
+          <h2><a href="https://www.whitepaper.mx/p/whitepaper-hoy-9d4">Miércoles 11 de noviembre</a></h2>
+          <ul class="daily__sum" aria-label="Temas de la edición">
+            <li>Vidanta</li>
+            <li>IOS Offices</li>
+            <li>Grupo Simec</li>
+            <li>AMETEK</li>
+            <li>Clara</li>
+          </ul>
+          <a class="daily__rest" href="https://www.whitepaper.mx/p/whitepaper-hoy-9d4">y 5 temas más →</a>
           <div class="daily__actions">
             <a class="btn btn--sm" data-cta="hoy-leer" href="https://www.whitepaper.mx/p/whitepaper-hoy-9d4">Leer</a>
             <a class="btn btn--sm btn--ghost" href="https://www.whitepaper.mx/p/whitepaper-hoy-11-de-noviembre-de-e21"><span class="tri" aria-hidden="true">▶</span> 7 min</a>
           </div>
         </article>
 
-        <ol class="daily__list" aria-label="Ediciones anteriores">
-          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-14d"><time datetime="2026-11-10">Mar 10.11</time><span>PPG Comex; Diplomat Holdings; FIGS en México; Renault; Kerry Group; YouTube; Volkswagen; Anthropic; el consejo de Nvidia</span></a><span class="tag"><svg class="lock"><use href="#lock"/></svg><span class="sr-only">Suscriptores</span></span></li>
-          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-08c"><time datetime="2026-11-09">Lun 09.11</time><span>Embotelladora en Colombia; crece Nexu; movimientos clave; Casa Dragones; emisiones de acciones de AI en EUA (y afores); las ‘big four’ van por las medianas; la popularidad de NCIS</span></a><span class="tag"><svg class="lock"><use href="#lock"/></svg><span class="sr-only">Suscriptores</span></span></li>
-          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-30f"><time datetime="2026-11-06">Vie 06.11</time><span>Ventas mismas tiendas de retailers; Grupo Pochteca; conoce a: Marlene García; Buc-ee’s; LIV Golf; menos Cybertrucks; Häagen-Dazs</span></a><span class="tag"><svg class="lock"><use href="#lock"/></svg><span class="sr-only">Suscriptores</span></span></li>
-          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-1c1"><time datetime="2026-11-05">Jue 05.11</time><span>Ternium; todos son “el más grande”; NBA en México; Flying Tiger; NY Times; el impacto de las elecciones intermedias en EUA; Wegovy; Harley-Davidson</span></a><span class="tag"><svg class="lock"><use href="#lock"/></svg><span class="sr-only">Suscriptores</span></span></li>
-          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-2a3"><time datetime="2026-11-04">Mié 04.11</time><span>Primark en México; Capital Digital; Authentic Brands y Lee; resultados de Banorte; AkzoNobel; consejos de administración en EUA; CVS Health; Spotlight en: Jacques Marie Mage</span></a><span class="tag"><svg class="lock"><use href="#lock"/></svg><span class="sr-only">Suscriptores</span></span></li>
+        <p class="kicker daily__prevhead">Ediciones anteriores</p>
+        <ol class="daily__list daily__list--compact" aria-label="Ediciones anteriores">
+          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-14d"><time datetime="2026-11-10">Mar 10</time><span class="daily__topics">PPG Comex · Diplomat Holdings · FIGS en México</span><span class="daily__more">+6</span></a></li>
+          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-08c"><time datetime="2026-11-09">Lun 09</time><span class="daily__topics">Embotelladora en Colombia · Crece Nexu · Movimientos clave</span><span class="daily__more">+4</span></a></li>
+          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-30f"><time datetime="2026-11-06">Vie 06</time><span class="daily__topics">Ventas mismas tiendas de retailers · Grupo Pochteca · Conoce a: Marlene García</span><span class="daily__more">+4</span></a></li>
+          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-1c1"><time datetime="2026-11-05">Jue 05</time><span class="daily__topics">Ternium · Todos son “el más grande” · NBA en México</span><span class="daily__more">+5</span></a></li>
+          <li><a href="https://www.whitepaper.mx/p/whitepaper-hoy-2a3"><time datetime="2026-11-04">Mié 04</time><span class="daily__topics">Primark en México · Capital Digital · Authentic Brands y Lee</span><span class="daily__more">+5</span></a></li>
         </ol>
         <a class="link" href="https://www.whitepaper.mx/archive">Todas las ediciones →</a>
       </section>
